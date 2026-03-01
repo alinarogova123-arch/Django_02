@@ -3,9 +3,9 @@ from django.shortcuts import get_object_or_404
 from datacenter.models import Passcard
 from datacenter.models import Visit
 from django.shortcuts import render
-from datacenter.models import get_duration
-from datacenter.models import format_duration
-from datacenter.models import is_visit_long
+from datacenter.helper_functions import get_duration
+from datacenter.helper_functions import format_duration
+from datacenter.helper_functions import is_visit_long
 from django.utils.timezone import localtime
 
 
