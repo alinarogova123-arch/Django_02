@@ -1,8 +1,8 @@
 import django
 from datacenter.models import Passcard
 from datacenter.models import Visit
-from datacenter.models import get_duration
-from datacenter.models import format_duration
+from datacenter.helper_functions import get_duration
+from datacenter.helper_functions import format_duration
 from django.shortcuts import render
 from django.utils.timezone import localtime
 
@@ -19,9 +19,6 @@ def storage_information_view(request):
             }
         )
     context = {
-        'non_closed_visits': non_closed_visits,
+        'non_closed_visits': non_closed_visits,  # не закрытые посещения
     }
     return render(request, 'storage_information.html', context)
-
-
-
